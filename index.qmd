@@ -70,7 +70,7 @@ Buscando mi primera oportunidad para aportar valor en un rol de **Data Analyst**
 ---
 
 #### 🛡️ FinShield: Prevención de Fraude Financiero
-![](fraude.png){fig-align="center" width="100%"}
+![](fraude.png.jpg){fig-align="center" width="100%"}
 
 **El Desafío:** ¿Cómo detectar el 0.9% de fraude entre millones de transacciones? Utilicé **escala logarítmica** y análisis de patrones quirúrgicos para identificar riesgos críticos en canales de transferencia.
 
