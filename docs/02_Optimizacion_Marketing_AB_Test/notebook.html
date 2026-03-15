@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.35">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>notebook – Vic | Data</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-46f66b053e56abd73bb6e954d61a315b.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-a0f9fd0d421825b736dc1bbcbcba2219.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Vic | Data</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Inicio</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">Sobre mí</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<div id="cell-0" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Cargar el archivo de hipótesis</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>hypotheses <span class="op">=</span> pd.read_csv(<span class="st">'/datasets/hypotheses_us.csv'</span>, sep<span class="op">=</span><span class="st">';'</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Renombrar las columnas para mayor comodidad</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>hypotheses.columns <span class="op">=</span> [<span class="st">'Hypothesis'</span>, <span class="st">'Reach'</span>, <span class="st">'Impact'</span>, <span class="st">'Confidence'</span>, <span class="st">'Effort'</span>]</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Mostrar el DataFrame y la información de sus columnas</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(hypotheses)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>hypotheses.info()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                                          Hypothesis  Reach  Impact  \
+0  Add two new channels for attracting traffic. T...      3      10   
+1  Launch your own delivery service. This will sh...      2       5   
+2  Add product recommendation blocks to the store...      8       3   
+3  Change the category structure. This will incre...      8       3   
+4  Change the background color on the main page. ...      3       1   
+5  Add a customer review page. This will increase...      3       2   
+6  Show banners with current offers and sales on ...      5       3   
+7  Add a subscription form to all the main pages....     10       7   
+8  Launch a promotion that gives users discounts ...      1       9   
+
+   Confidence  Effort  
+0           8       6  
+1           4      10  
+2           7       3  
+3           3       8  
+4           1       1  
+5           2       3  
+6           8       3  
+7           8       5  
+8           9       5  
+
+
+&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 9 entries, 0 to 8
+Data columns (total 5 columns):
+ #   Column      Non-Null Count  Dtype 
+---  ------      --------------  ----- 
+ 0   Hypothesis  9 non-null      object
+ 1   Reach       9 non-null      int64 
+ 2   Impact      9 non-null      int64 
+ 3   Confidence  9 non-null      int64 
+ 4   Effort      9 non-null      int64 
+dtypes: int64(4), object(1)
+memory usage: 488.0+ bytes</code></pre>
+</div>
+</div>
+<div id="cell-1" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Aplica el framework ICE</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>hypotheses[<span class="st">'ICE'</span>] <span class="op">=</span> (hypotheses[<span class="st">'Impact'</span>] <span class="op">*</span> hypotheses[<span class="st">'Confidence'</span>]) <span class="op">/</span> hypotheses[<span class="st">'Effort'</span>]</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Ordena el DataFrame por la puntuación ICE</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>ice_sorted <span class="op">=</span> hypotheses[[<span class="st">'Hypothesis'</span>, <span class="st">'ICE'</span>]].sort_values(by<span class="op">=</span><span class="st">'ICE'</span>, ascending<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Muestra el resultado</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Priorización de hipótesis usando el framework ICE:"</span>)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(ice_sorted)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Priorización de hipótesis usando el framework ICE:
+                                          Hypothesis        ICE
+8  Launch a promotion that gives users discounts ...  16.200000
+0  Add two new channels for attracting traffic. T...  13.333333
+7  Add a subscription form to all the main pages....  11.200000
+6  Show banners with current offers and sales on ...   8.000000
+2  Add product recommendation blocks to the store...   7.000000
+1  Launch your own delivery service. This will sh...   2.000000
+5  Add a customer review page. This will increase...   1.333333
+3  Change the category structure. This will incre...   1.125000
+4  Change the background color on the main page. ...   1.000000</code></pre>
+</div>
+</div>
+<div id="cell-2" class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Aplica el framework RICE</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>hypotheses[<span class="st">'RICE'</span>] <span class="op">=</span> (hypotheses[<span class="st">'Reach'</span>] <span class="op">*</span> hypotheses[<span class="st">'Impact'</span>] <span class="op">*</span> hypotheses[<span class="st">'Confidence'</span>]) <span class="op">/</span> hypotheses[<span class="st">'Effort'</span>]</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Ordena el DataFrame por la puntuación RICE</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>rice_sorted <span class="op">=</span> hypotheses[[<span class="st">'Hypothesis'</span>, <span class="st">'RICE'</span>]].sort_values(by<span class="op">=</span><span class="st">'RICE'</span>, ascending<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Muestra el resultado</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Priorización de hipótesis usando el framework RICE:"</span>)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(rice_sorted)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Priorización de hipótesis usando el framework RICE:
+                                          Hypothesis   RICE
+7  Add a subscription form to all the main pages....  112.0
+2  Add product recommendation blocks to the store...   56.0
+0  Add two new channels for attracting traffic. T...   40.0
+6  Show banners with current offers and sales on ...   40.0
+8  Launch a promotion that gives users discounts ...   16.2
+3  Change the category structure. This will incre...    9.0
+1  Launch your own delivery service. This will sh...    4.0
+5  Add a customer review page. This will increase...    4.0
+4  Change the background color on the main page. ...    3.0</code></pre>
+</div>
+</div>
+<p>Explicación de los cambios en la priorización La priorización de las hipótesis cambia significativamente cuando se utiliza RICE en lugar de ICE. La razón principal de este cambio es que RICE incluye la variable Reach(Alcance) .</p>
+<p>Marco ICE : Este marco se enfoca en el Impacto , la Confianza y el Esfuerzo . Las hipótesis que tienen una puntuación alta de ICE son aquellas que se esperan que tengan un gran efecto con un bajo costo de implementación.</p>
+<p>Framework RICE : Al agregar el Alcance , este framework prioriza las hipótesis que, además de ser prometedoras y viables, afectarán a una gran cantidad de usuarios . Una hipótesis con un gran impacto y confianza pero con un alcance bajo, tendrá una puntuación ICE alta, pero una puntuación RICE baja. Por el contrario, una hipótesis con un alcance alto, aunque su impacto sea moderado, puede terminar en la cima de la lista.</p>
+<p>La hipótesis 8, “Lanzar una promoción que dé descuentos a los usuarios”, tiene la puntuación ICE más alta (16,20). Esto significa que tiene un gran impacto y confianza, y requiere poco esfuerzo. Sin embargo, su alcance es bajo.</p>
+<p>La hipótesis 7, “Agregar un formulario de suscripción a todas las páginas principales”, tiene una puntuación RICE mucho más alta (112.0). Aunque su impacto y confianza podrían no ser tan altos, su alcance es 10 , lo que indica que afectará a un gran número de usuarios, catapultándola al primer puesto en la priorización RICE.</p>
+<div id="cell-4" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> datetime <span class="im">as</span> dt</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Cargar los DataFrames</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>orders <span class="op">=</span> pd.read_csv(<span class="st">'/datasets/orders_us.csv'</span>)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>visits <span class="op">=</span> pd.read_csv(<span class="st">'/datasets/visits_us.csv'</span>)</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Convertir las fechas a formato datetime</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>orders[<span class="st">'date'</span>] <span class="op">=</span> pd.to_datetime(orders[<span class="st">'date'</span>])</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>visits[<span class="st">'date'</span>] <span class="op">=</span> pd.to_datetime(visits[<span class="st">'date'</span>])</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Encontrar usuarios que están en ambos grupos</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>group_A_users <span class="op">=</span> orders[orders[<span class="st">'group'</span>] <span class="op">==</span> <span class="st">'A'</span>][<span class="st">'visitorId'</span>].unique()</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>group_B_users <span class="op">=</span> orders[orders[<span class="st">'group'</span>] <span class="op">==</span> <span class="st">'B'</span>][<span class="st">'visitorId'</span>].unique()</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>both_groups_users <span class="op">=</span> np.intersect1d(group_A_users, group_B_users)</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Número de usuarios en ambos grupos: </span><span class="sc">{</span><span class="bu">len</span>(both_groups_users)<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Eliminar a los usuarios de ambos grupos del DataFrame de pedidos</span></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>orders_filtered <span class="op">=</span> orders[<span class="op">~</span>orders[<span class="st">'visitorId'</span>].isin(both_groups_users)]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Número de usuarios en ambos grupos: 58</code></pre>
+</div>
+</div>
+<div id="cell-5" class="cell" data-execution_count="5">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Crear una tabla de pedidos y visitas acumuladas</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>dates_groups <span class="op">=</span> orders_filtered[[<span class="st">'date'</span>, <span class="st">'group'</span>]].drop_duplicates()</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>orders_aggregated <span class="op">=</span> dates_groups.<span class="bu">apply</span>(</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">lambda</span> x: orders_filtered[</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>        np.logical_and(</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>            orders_filtered[<span class="st">'date'</span>] <span class="op">&lt;=</span> x[<span class="st">'date'</span>], orders_filtered[<span class="st">'group'</span>] <span class="op">==</span> x[<span class="st">'group'</span>]</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    ].agg(</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>        {</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>            <span class="st">'date'</span>: <span class="st">'max'</span>,</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>            <span class="st">'group'</span>: <span class="st">'max'</span>,</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>            <span class="st">'transactionId'</span>: <span class="st">'nunique'</span>,</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>            <span class="st">'visitorId'</span>: <span class="st">'nunique'</span>,</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>            <span class="st">'revenue'</span>: <span class="st">'sum'</span>,</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>    axis<span class="op">=</span><span class="dv">1</span>,</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>).sort_values(by<span class="op">=</span>[<span class="st">'date'</span>, <span class="st">'group'</span>])</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>visitors_aggregated <span class="op">=</span> dates_groups.<span class="bu">apply</span>(</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>    <span class="kw">lambda</span> x: visits[</span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>        np.logical_and(visits[<span class="st">'date'</span>] <span class="op">&lt;=</span> x[<span class="st">'date'</span>], visits[<span class="st">'group'</span>] <span class="op">==</span> x[<span class="st">'group'</span>])</span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>    ].agg({<span class="st">'date'</span>: <span class="st">'max'</span>, <span class="st">'group'</span>: <span class="st">'max'</span>, <span class="st">'visits'</span>: <span class="st">'sum'</span>}),</span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>    axis<span class="op">=</span><span class="dv">1</span>,</span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>).sort_values(by<span class="op">=</span>[<span class="st">'date'</span>, <span class="st">'group'</span>])</span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>cumulative_data <span class="op">=</span> orders_aggregated.merge(</span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>    visitors_aggregated, left_on<span class="op">=</span>[<span class="st">'date'</span>, <span class="st">'group'</span>], right_on<span class="op">=</span>[<span class="st">'date'</span>, <span class="st">'group'</span>]</span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a>cumulative_data.columns <span class="op">=</span> [</span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>    <span class="st">'date'</span>,</span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a>    <span class="st">'group'</span>,</span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a>    <span class="st">'orders'</span>,</span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a>    <span class="st">'buyers'</span>,</span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a>    <span class="st">'revenue'</span>,</span>
+<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a>    <span class="st">'visits'</span>,</span>
+<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Gráfico de ingresos acumulados por grupo</span></span>
+<span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a>cumulative_revenue_A <span class="op">=</span> cumulative_data[cumulative_data[<span class="st">'group'</span>] <span class="op">==</span> <span class="st">'A'</span>][[<span class="st">'date'</span>, <span class="st">'revenue'</span>]]</span>
+<span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a>cumulative_revenue_B <span class="op">=</span> cumulative_data[cumulative_data[<span class="st">'group'</span>] <span class="op">==</span> <span class="st">'B'</span>][[<span class="st">'date'</span>, <span class="st">'revenue'</span>]]</span>
+<span id="cb9-41"><a href="#cb9-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-42"><a href="#cb9-42" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">6</span>))</span>
+<span id="cb9-43"><a href="#cb9-43" aria-hidden="true" tabindex="-1"></a>plt.plot(cumulative_revenue_A[<span class="st">'date'</span>], cumulative_revenue_A[<span class="st">'revenue'</span>], label<span class="op">=</span><span class="st">'Grupo A'</span>)</span>
+<span id="cb9-44"><a href="#cb9-44" aria-hidden="true" tabindex="-1"></a>plt.plot(cumulative_revenue_B[<span class="st">'date'</span>], cumulative_revenue_B[<span class="st">'revenue'</span>], label<span class="op">=</span><span class="st">'Grupo B'</span>)</span>
+<span id="cb9-45"><a href="#cb9-45" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Ingresos acumulados por grupo'</span>)</span>
+<span id="cb9-46"><a href="#cb9-46" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Fecha'</span>)</span>
+<span id="cb9-47"><a href="#cb9-47" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Ingresos acumulados'</span>)</span>
+<span id="cb9-48"><a href="#cb9-48" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb9-49"><a href="#cb9-49" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb9-50"><a href="#cb9-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-51"><a href="#cb9-51" aria-hidden="true" tabindex="-1"></a><span class="co"># Gráfico del tamaño promedio de pedido acumulado por grupo</span></span>
+<span id="cb9-52"><a href="#cb9-52" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">6</span>))</span>
+<span id="cb9-53"><a href="#cb9-53" aria-hidden="true" tabindex="-1"></a>plt.plot(</span>
+<span id="cb9-54"><a href="#cb9-54" aria-hidden="true" tabindex="-1"></a>    cumulative_revenue_A[<span class="st">'date'</span>],</span>
+<span id="cb9-55"><a href="#cb9-55" aria-hidden="true" tabindex="-1"></a>    cumulative_revenue_A[<span class="st">'revenue'</span>] <span class="op">/</span> cumulative_data[cumulative_data[<span class="st">'group'</span>] <span class="op">==</span> <span class="st">'A'</span>][<span class="st">'orders'</span>],</span>
+<span id="cb9-56"><a href="#cb9-56" aria-hidden="true" tabindex="-1"></a>    label<span class="op">=</span><span class="st">'Grupo A'</span>,</span>
+<span id="cb9-57"><a href="#cb9-57" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb9-58"><a href="#cb9-58" aria-hidden="true" tabindex="-1"></a>plt.plot(</span>
+<span id="cb9-59"><a href="#cb9-59" aria-hidden="true" tabindex="-1"></a>    cumulative_revenue_B[<span class="st">'date'</span>],</span>
+<span id="cb9-60"><a href="#cb9-60" aria-hidden="true" tabindex="-1"></a>    cumulative_revenue_B[<span class="st">'revenue'</span>] <span class="op">/</span> cumulative_data[cumulative_data[<span class="st">'group'</span>] <span class="op">==</span> <span class="st">'B'</span>][<span class="st">'orders'</span>],</span>
+<span id="cb9-61"><a href="#cb9-61" aria-hidden="true" tabindex="-1"></a>    label<span class="op">=</span><span class="st">'Grupo B'</span>,</span>
+<span id="cb9-62"><a href="#cb9-62" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb9-63"><a href="#cb9-63" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Tamaño de pedido promedio acumulado por grupo'</span>)</span>
+<span id="cb9-64"><a href="#cb9-64" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Fecha'</span>)</span>
+<span id="cb9-65"><a href="#cb9-65" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Tamaño de pedido promedio'</span>)</span>
+<span id="cb9-66"><a href="#cb9-66" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb9-67"><a href="#cb9-67" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="notebook_files/figure-html/cell-6-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="notebook_files/figure-html/cell-6-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<ol type="1">
+<li><p>Ingreso acumulado por grupo -Ambos grupos tienen ingresos que crecen de manera constante. -El Grupo B tiene un crecimiento de ingresos consistentemente superior al Grupo A desde el inicio. -Alrededor del 18 de agosto, los ingresos del Grupo B experimentan un aumento brusco y significativo. Esto podría indicar un pedido muy grande o la llegada de un usuario muy valioso. -La brecha entre ambos grupos se mantiene, con el Grupo B liderando claramente al final de la prueba. Conjeturas: El salto arrepentido en el Grupo B sugiere la presencia de una o más anomalías (outliers) que inflan los ingresos de manera artificial. Sería importante investigar este pico para confirmar si un solo pedido o pocos pedidos caros son responsables de esta diferencia.</p></li>
+<li><p>Tamaño de pedido promedio acumulado por grupo -Ambas líneas son volátiles al principio, lo cual es normal cuando hay pocos datos. -A partir del 15 de agosto, el tamaño de pedido promedio del Grupo B se dispara y se mantiene muy por encima del Grupo A. -El Grupo A muestra un crecimiento más lento y estable en su tamaño de pedido promedio. -La brecha en el tamaño de pedido promedio se mantiene amplia después del pico del Grupo B. Conjeturas: Este gráfico refuerza la sospecha de la presencia de valores atípicos en el Grupo B. Un pedido extremadamente grande podría inflar el tamaño del pedido promedio acumulado y crear esta gran diferencia. Sin estos valores atípicos, la diferencia entre ambos grupos podría ser mucho menor.</p></li>
+</ol>
+<div id="cell-8" class="cell" data-execution_count="6">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> datetime <span class="im">as</span> dt</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Cargar los DataFrames y limpiar los usuarios que están en ambos grupos</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>orders <span class="op">=</span> pd.read_csv(<span class="st">'/datasets/orders_us.csv'</span>)</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>visits <span class="op">=</span> pd.read_csv(<span class="st">'/datasets/visits_us.csv'</span>)</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>orders[<span class="st">'date'</span>] <span class="op">=</span> pd.to_datetime(orders[<span class="st">'date'</span>])</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>visits[<span class="st">'date'</span>] <span class="op">=</span> pd.to_datetime(visits[<span class="st">'date'</span>])</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>both_groups_users <span class="op">=</span> np.intersect1d(orders[orders[<span class="st">'group'</span>] <span class="op">==</span> <span class="st">'A'</span>][<span class="st">'visitorId'</span>].unique(), orders[orders[<span class="st">'group'</span>] <span class="op">==</span> <span class="st">'B'</span>][<span class="st">'visitorId'</span>].unique())</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>orders_filtered <span class="op">=</span> orders[<span class="op">~</span>orders[<span class="st">'visitorId'</span>].isin(both_groups_users)]</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Prepara los datos acumulados para cada grupo por separado</span></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>cumulative_orders_A <span class="op">=</span> orders_filtered[orders_filtered[<span class="st">'group'</span>] <span class="op">==</span> <span class="st">'A'</span>][[<span class="st">'date'</span>, <span class="st">'revenue'</span>, <span class="st">'transactionId'</span>, <span class="st">'visitorId'</span>]].sort_values(by<span class="op">=</span><span class="st">'date'</span>).groupby(<span class="st">'date'</span>).agg({</span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">'revenue'</span>: <span class="st">'sum'</span>,</span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>    <span class="st">'transactionId'</span>: <span class="st">'nunique'</span>,</span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">'visitorId'</span>: <span class="st">'nunique'</span></span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>}).reset_index().rename(columns<span class="op">=</span>{<span class="st">'transactionId'</span>: <span class="st">'orders_A'</span>, <span class="st">'visitorId'</span>: <span class="st">'buyers_A'</span>, <span class="st">'revenue'</span>: <span class="st">'revenue_A'</span>})</span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>cumulative_visits_A <span class="op">=</span> visits[visits[<span class="st">'group'</span>] <span class="op">==</span> <span class="st">'A'</span>][[<span class="st">'date'</span>, <span class="st">'visits'</span>]].sort_values(by<span class="op">=</span><span class="st">'date'</span>).groupby(<span class="st">'date'</span>).<span class="bu">sum</span>().reset_index().rename(columns<span class="op">=</span>{<span class="st">'visits'</span>: <span class="st">'visits_A'</span>})</span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>cumulative_orders_B <span class="op">=</span> orders_filtered[orders_filtered[<span class="st">'group'</span>] <span class="op">==</span> <span class="st">'B'</span>][[<span class="st">'date'</span>, <span class="st">'revenue'</span>, <span class="st">'transactionId'</span>, <span class="st">'visitorId'</span>]].sort_values(by<span class="op">=</span><span class="st">'date'</span>).groupby(<span class="st">'date'</span>).agg({</span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>    <span class="st">'revenue'</span>: <span class="st">'sum'</span>,</span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>    <span class="st">'transactionId'</span>: <span class="st">'nunique'</span>,</span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>    <span class="st">'visitorId'</span>: <span class="st">'nunique'</span></span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>}).reset_index().rename(columns<span class="op">=</span>{<span class="st">'transactionId'</span>: <span class="st">'orders_B'</span>, <span class="st">'visitorId'</span>: <span class="st">'buyers_B'</span>, <span class="st">'revenue'</span>: <span class="st">'revenue_B'</span>})</span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>cumulative_visits_B <span class="op">=</span> visits[visits[<span class="st">'group'</span>] <span class="op">==</span> <span class="st">'B'</span>][[<span class="st">'date'</span>, <span class="st">'visits'</span>]].sort_values(by<span class="op">=</span><span class="st">'date'</span>).groupby(<span class="st">'date'</span>).<span class="bu">sum</span>().reset_index().rename(columns<span class="op">=</span>{<span class="st">'visits'</span>: <span class="st">'visits_B'</span>})</span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Fusiona los datos acumulados de ambos grupos</span></span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a>cumulative_data <span class="op">=</span> cumulative_orders_A.merge(cumulative_visits_A, on<span class="op">=</span><span class="st">'date'</span>, how<span class="op">=</span><span class="st">'left'</span>).merge(cumulative_orders_B, on<span class="op">=</span><span class="st">'date'</span>, how<span class="op">=</span><span class="st">'left'</span>).merge(cumulative_visits_B, on<span class="op">=</span><span class="st">'date'</span>, how<span class="op">=</span><span class="st">'left'</span>)</span>
+<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Rellena los valores NaN y calcula las sumas acumuladas</span></span>
+<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> column <span class="kw">in</span> [<span class="st">'orders_A'</span>, <span class="st">'buyers_A'</span>, <span class="st">'revenue_A'</span>, <span class="st">'visits_A'</span>, <span class="st">'orders_B'</span>, <span class="st">'buyers_B'</span>, <span class="st">'revenue_B'</span>, <span class="st">'visits_B'</span>]:</span>
+<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a>    cumulative_data[column] <span class="op">=</span> cumulative_data[column].fillna(<span class="dv">0</span>).cumsum()</span>
+<span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-36"><a href="#cb10-36" aria-hidden="true" tabindex="-1"></a><span class="co"># Tasas de conversión</span></span>
+<span id="cb10-37"><a href="#cb10-37" aria-hidden="true" tabindex="-1"></a>cumulative_data[<span class="st">'conversion_A'</span>] <span class="op">=</span> cumulative_data[<span class="st">'orders_A'</span>] <span class="op">/</span> cumulative_data[<span class="st">'visits_A'</span>]</span>
+<span id="cb10-38"><a href="#cb10-38" aria-hidden="true" tabindex="-1"></a>cumulative_data[<span class="st">'conversion_B'</span>] <span class="op">=</span> cumulative_data[<span class="st">'orders_B'</span>] <span class="op">/</span> cumulative_data[<span class="st">'visits_B'</span>]</span>
+<span id="cb10-39"><a href="#cb10-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-40"><a href="#cb10-40" aria-hidden="true" tabindex="-1"></a><span class="co"># Grafica de las tasas de conversión acumuladas</span></span>
+<span id="cb10-41"><a href="#cb10-41" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">6</span>))</span>
+<span id="cb10-42"><a href="#cb10-42" aria-hidden="true" tabindex="-1"></a>plt.plot(cumulative_data[<span class="st">'date'</span>], cumulative_data[<span class="st">'conversion_A'</span>], label<span class="op">=</span><span class="st">'Grupo A'</span>)</span>
+<span id="cb10-43"><a href="#cb10-43" aria-hidden="true" tabindex="-1"></a>plt.plot(cumulative_data[<span class="st">'date'</span>], cumulative_data[<span class="st">'conversion_B'</span>], label<span class="op">=</span><span class="st">'Grupo B'</span>)</span>
+<span id="cb10-44"><a href="#cb10-44" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Tasa de conversión acumulada por grupo'</span>)</span>
+<span id="cb10-45"><a href="#cb10-45" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Fecha'</span>)</span>
+<span id="cb10-46"><a href="#cb10-46" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Tasa de conversión'</span>)</span>
+<span id="cb10-47"><a href="#cb10-47" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb10-48"><a href="#cb10-48" aria-hidden="true" tabindex="-1"></a>plt.ylim(<span class="dv">0</span>, <span class="fl">0.04</span>)</span>
+<span id="cb10-49"><a href="#cb10-49" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb10-50"><a href="#cb10-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-51"><a href="#cb10-51" aria-hidden="true" tabindex="-1"></a><span class="co"># Grafica la diferencia relativa de la tasa de conversión</span></span>
+<span id="cb10-52"><a href="#cb10-52" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">6</span>))</span>
+<span id="cb10-53"><a href="#cb10-53" aria-hidden="true" tabindex="-1"></a>plt.plot(</span>
+<span id="cb10-54"><a href="#cb10-54" aria-hidden="true" tabindex="-1"></a>    cumulative_data[<span class="st">'date'</span>],</span>
+<span id="cb10-55"><a href="#cb10-55" aria-hidden="true" tabindex="-1"></a>    cumulative_data[<span class="st">'conversion_B'</span>] <span class="op">/</span> cumulative_data[<span class="st">'conversion_A'</span>] <span class="op">-</span> <span class="dv">1</span>,</span>
+<span id="cb10-56"><a href="#cb10-56" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb10-57"><a href="#cb10-57" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Diferencia relativa de la tasa de conversión acumulada B vs A'</span>)</span>
+<span id="cb10-58"><a href="#cb10-58" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Fecha'</span>)</span>
+<span id="cb10-59"><a href="#cb10-59" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Diferencia relativa'</span>)</span>
+<span id="cb10-60"><a href="#cb10-60" aria-hidden="true" tabindex="-1"></a>plt.axhline(y<span class="op">=</span><span class="dv">0</span>, color<span class="op">=</span><span class="st">'black'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>)</span>
+<span id="cb10-61"><a href="#cb10-61" aria-hidden="true" tabindex="-1"></a>plt.axhline(y<span class="op">=</span><span class="fl">0.1</span>, color<span class="op">=</span><span class="st">'grey'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>)</span>
+<span id="cb10-62"><a href="#cb10-62" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="notebook_files/figure-html/cell-7-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="notebook_files/figure-html/cell-7-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<ol type="1">
+<li><p>Tasa de conversión acumulada por grupo -Al principio, el Grupo A tiene una tasa de conversión más alta, pero esta disminuye gradualmente. -La tasa de conversión del Grupo B comienza por debajo del Grupo A y luego se estabiliza. -A partir de la mitad de la prueba, la tasa del Grupo B se mantiene consistentemente por encima de la del Grupo A, y las líneas se separan. La línea del Grupo B es mucho más estable. Conjeturas: El rendimiento inicial del Grupo A podría deberse a un efecto inicial de la prueba, pero parece que el Grupo B tiene una tasa de conversión más sostenible y estable a largo plazo.</p></li>
+<li><p>Diferencia relativa de la tasa de conversión acumulada -La diferencia relativa fluctuó al principio de la prueba. -A partir del 6 de agosto, el Grupo B comenzó a superar al Grupo A, y la diferencia se mantuvo en territorio positivo. -La diferencia a favor del Grupo B se ha estabilizado en un rango entre el 10% y el 20% a lo largo del tiempo, lo que sugiere que su conversión es consistentemente mejor. Conjeturas: El gráfico confirma que el Grupo B está superando consistentemente al Grupo A en términos de conversión, con una ventaja significativa. Las fluctuaciones iniciales han disminuido, lo que sugiere que los resultados son confiables.</p></li>
+</ol>
+<p>La prueba parece exitosa, ya que se observa una clara diferencia entre los grupos.</p>
+<div id="cell-10" class="cell" data-execution_count="7">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Crea un DataFrame con el número de pedidos por usuario</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>orders_by_users <span class="op">=</span> (</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    orders_filtered.groupby(<span class="st">'visitorId'</span>, as_index<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    .agg({<span class="st">'transactionId'</span>: pd.Series.nunique})</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>orders_by_users.columns <span class="op">=</span> [<span class="st">'visitorId'</span>, <span class="st">'orders'</span>]</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Gráfico de dispersión del número de pedidos por usuario</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>x_values <span class="op">=</span> pd.Series(<span class="bu">range</span>(<span class="dv">0</span>, <span class="bu">len</span>(orders_by_users)))</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">6</span>))</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>plt.scatter(x_values, orders_by_users[<span class="st">'orders'</span>])</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Número de pedidos por usuario'</span>)</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Usuarios'</span>)</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Número de pedidos'</span>)</span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Calcula los percentiles 95 y 99</span></span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.percentile(orders_by_users[<span class="st">'orders'</span>], [<span class="dv">95</span>, <span class="dv">99</span>]))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="notebook_files/figure-html/cell-8-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1. 2.]</code></pre>
+</div>
+</div>
+<p>Análisis de pedidos por usuario Conclusiones y conjeturas del gráfico de dispersión. -La mayoría de los usuarios realizaron un solo pedido . Hay un número muy pequeño de usuarios que hicieron dos pedidos, y una cantidad aún menor que hizo tres. -El gráfico muestra que los datos de los usuarios con más de un pedido se dispersan de manera notoria, lo que los convierte en candidatos a anomalías .</p>
+<p>Percentiles y definición de anomalías El percentil 95 indica que el 5% de los usuarios realizaron 2 o más pedidos.</p>
+<p>El percentil 99 indica que solo el 1% de los usuarios realizó 3 o más pedidos.</p>
+<div id="cell-12" class="cell" data-execution_count="8">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Gráfico de dispersión de los precios de los pedidos</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>x_values <span class="op">=</span> pd.Series(<span class="bu">range</span>(<span class="dv">0</span>, <span class="bu">len</span>(orders_filtered[<span class="st">'revenue'</span>])))</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">6</span>))</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>plt.scatter(x_values, orders_filtered[<span class="st">'revenue'</span>])</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Precios de los pedidos'</span>)</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Pedidos'</span>)</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Precios'</span>)</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Calcula los percentiles 95 y 99 de los precios de los pedidos</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.percentile(orders_filtered[<span class="st">'revenue'</span>], [<span class="dv">95</span>, <span class="dv">99</span>]))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="notebook_files/figure-html/cell-9-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[414.275 830.3  ]</code></pre>
+</div>
+</div>
+<p>Gráfico de precios de pedidos. -La gran mayoría de los pedidos tienen precios relativamente bajos, que se agrupan por debajo de los 2500 USD. -Hay unos pocos puntos de datos que se disparan muy por encima de este valor. Estos puntos representan pedidos con precios inusualmente altos, que podríamos considerar anomalías .</p>
+<p>Percentiles y definición de anomalías -El percentil 95 $414.28) significa que el 5% de los pedidos son más caros que $414.28. -El percentil 99 $830.3) significa que el 1% de los pedidos son más caros que $830.3.</p>
+<p>A pesar de que el percentil 99 es relativamente bajo, el gráfico muestra un gran salto en el precio después de este punto. Podemos considerar que un pedido es una anomalía si su precio es superior a $414.28 , eliminando así el 5% de los pedidos más caros.</p>
+<p>Análisis de la significancia estadística (datos en bruto) -Valor p: El valor p es 0.01102 . Como este valor es menor que el umbral de 0.05 , podemos rechazar la hipótesis nula. Esto significa que la diferencia en la conversión entre el Grupo A y el Grupo B es estadísticamente significativa . No se debe al azar. -Ganancia relativa: El Grupo B tiene una ganancia relativa del 16% en la conversión en comparación con el Grupo A.</p>
+<p>El Grupo B tiene una conversión significativamente más alta que el Grupo A. Esta diferencia no se debe a la aleatoriedad, y la mejora de más del 10% es considerable, sin embargo, este análisis inicial no considera la posible influencia de los valores atípicos.</p>
+<div id="cell-15" class="cell" data-execution_count="10">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy.stats <span class="im">as</span> stats</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Filtra los datos de ingresos para cada grupo, usando el DataFrame orders_filtered</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>revenueA <span class="op">=</span> orders_filtered[orders_filtered[<span class="st">'group'</span>] <span class="op">==</span> <span class="st">'A'</span>][<span class="st">'revenue'</span>]</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>revenueB <span class="op">=</span> orders_filtered[orders_filtered[<span class="st">'group'</span>] <span class="op">==</span> <span class="st">'B'</span>][<span class="st">'revenue'</span>]</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Calcula la significancia estadística y la diferencia relativa</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>p_value_revenue <span class="op">=</span> stats.mannwhitneyu(revenueA, revenueB)[<span class="dv">1</span>]</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>relative_gain_revenue <span class="op">=</span> revenueB.mean() <span class="op">/</span> revenueA.mean() <span class="op">-</span> <span class="dv">1</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Valor p (tamaño de pedido): </span><span class="sc">{</span>p_value_revenue<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Ganancia relativa del tamaño de pedido del Grupo B: </span><span class="sc">{</span>relative_gain_revenue<span class="sc">:.3f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Valor p (tamaño de pedido): 0.862
+Ganancia relativa del tamaño de pedido del Grupo B: 0.278</code></pre>
+</div>
+</div>
+<p>Análisis de la significancia estadística (datos en bruto) Tamaño promedio de pedido -Valor p: El valor p es 0.862 . Dado que este valor es mucho mayor que el umbral de 0.05, no podemos rechazar la hipótesis nula. Esto significa que la diferencia en el tamaño promedio de pedido entre el Grupo A y el Grupo B no es estadísticamente significativa . La diferencia observada podría deberse al azar. -Ganancia relativa: El Grupo B tiene una ganancia relativa de casi el 28% sobre el Grupo A. Sin embargo, la prueba estadística indica que esta diferencia no es confiable.</p>
+<p>1.- Conversión: La conversión del Grupo B es significativamente mejor que la del Grupo A. 2.- Tamaño de pedido: La diferencia en el tamaño promedio de pedido no es significativa , a pesar de que la ganancia relativa es grande.</p>
+<div class="alert alert-block alert-success">
+<p><b>Comentario del revisor (1ra Iteracion)</b> <a class="“tocSkip”"></a></p>
+<p>Muy bien aplicadas las pruebas estadísticas, ahora el siguiente paso es revisar si quitando valores atípicos el resultado cambia de alguna manera</p>
+</div>
+<div id="cell-18" class="cell" data-execution_count="11">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># DataFrame con el número de pedidos por usuario</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>ordersByUsers <span class="op">=</span> (</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    orders_filtered.groupby(<span class="st">'visitorId'</span>, as_index<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    .agg({<span class="st">'transactionId'</span>: pd.Series.nunique})</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>ordersByUsers.columns <span class="op">=</span> [<span class="st">'visitorId'</span>, <span class="st">'orders'</span>]</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Lista de usuarios con más de 2 pedidos (percentil 99 = 3)</span></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>usersWithManyOrders <span class="op">=</span> ordersByUsers[ordersByUsers[<span class="st">'orders'</span>] <span class="op">&gt;</span> <span class="dv">2</span>][<span class="st">'visitorId'</span>]</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Lista de usuarios con pedidos caros (precio &gt; 414.28)</span></span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>usersWithExpensiveOrders <span class="op">=</span> orders_filtered[orders_filtered[<span class="st">'revenue'</span>] <span class="op">&gt;</span> <span class="fl">414.28</span>][<span class="st">'visitorId'</span>]</span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Une las listas de usuarios anómalos y elimina duplicados</span></span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>abnormalUsers <span class="op">=</span> pd.concat([usersWithManyOrders, usersWithExpensiveOrders], axis<span class="op">=</span><span class="dv">0</span>).drop_duplicates()</span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Número de usuarios anómalos: </span><span class="sc">{</span><span class="bu">len</span>(abnormalUsers)<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Número de usuarios anómalos: 58</code></pre>
+</div>
+</div>
+<div id="cell-19" class="cell" data-execution_count="12">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># DataFrames de pedidos por usuario para cada grupo, excluyendo a los usuarios anómalos</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>ordersByUsersA_filtered <span class="op">=</span> orders_filtered[np.logical_and(</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    orders_filtered[<span class="st">'group'</span>] <span class="op">==</span> <span class="st">'A'</span>,</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>    np.logical_not(orders_filtered[<span class="st">'visitorId'</span>].isin(abnormalUsers))</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>)].groupby(<span class="st">'visitorId'</span>, as_index<span class="op">=</span><span class="va">False</span>).agg({<span class="st">'transactionId'</span>: pd.Series.nunique})</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>ordersByUsersA_filtered.columns <span class="op">=</span> [<span class="st">'visitorId'</span>, <span class="st">'orders'</span>]</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>ordersByUsersB_filtered <span class="op">=</span> orders_filtered[np.logical_and(</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>    orders_filtered[<span class="st">'group'</span>] <span class="op">==</span> <span class="st">'B'</span>,</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>    np.logical_not(orders_filtered[<span class="st">'visitorId'</span>].isin(abnormalUsers))</span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>)].groupby(<span class="st">'visitorId'</span>, as_index<span class="op">=</span><span class="va">False</span>).agg({<span class="st">'transactionId'</span>: pd.Series.nunique})</span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>ordersByUsersB_filtered.columns <span class="op">=</span> [<span class="st">'visitorId'</span>, <span class="st">'orders'</span>]</span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Muestras filtradas para la prueba de Mann-Whitney</span></span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>sampleA_filtered <span class="op">=</span> pd.concat([</span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>    ordersByUsersA_filtered[<span class="st">'orders'</span>],</span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>    pd.Series(<span class="dv">0</span>, index<span class="op">=</span>np.arange(visits[visits[<span class="st">'group'</span>] <span class="op">==</span> <span class="st">'A'</span>][<span class="st">'visits'</span>].<span class="bu">sum</span>() <span class="op">-</span> <span class="bu">len</span>(ordersByUsersA_filtered[<span class="st">'orders'</span>])), name<span class="op">=</span><span class="st">'orders'</span>)</span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>], axis<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a>sampleB_filtered <span class="op">=</span> pd.concat([</span>
+<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a>    ordersByUsersB_filtered[<span class="st">'orders'</span>],</span>
+<span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a>    pd.Series(<span class="dv">0</span>, index<span class="op">=</span>np.arange(visits[visits[<span class="st">'group'</span>] <span class="op">==</span> <span class="st">'B'</span>][<span class="st">'visits'</span>].<span class="bu">sum</span>() <span class="op">-</span> <span class="bu">len</span>(ordersByUsersB_filtered[<span class="st">'orders'</span>])), name<span class="op">=</span><span class="st">'orders'</span>)</span>
+<span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a>], axis<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb19-24"><a href="#cb19-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-25"><a href="#cb19-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Calcula la significancia estadística y la ganancia relativa</span></span>
+<span id="cb19-26"><a href="#cb19-26" aria-hidden="true" tabindex="-1"></a>p_value_filtered <span class="op">=</span> stats.mannwhitneyu(sampleA_filtered, sampleB_filtered)[<span class="dv">1</span>]</span>
+<span id="cb19-27"><a href="#cb19-27" aria-hidden="true" tabindex="-1"></a>relative_gain_filtered <span class="op">=</span> sampleB_filtered.mean() <span class="op">/</span> sampleA_filtered.mean() <span class="op">-</span> <span class="dv">1</span></span>
+<span id="cb19-28"><a href="#cb19-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-29"><a href="#cb19-29" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Valor p (conversión, datos filtrados): </span><span class="sc">{</span>p_value_filtered<span class="sc">:.5f}</span><span class="ss">"</span>)</span>
+<span id="cb19-30"><a href="#cb19-30" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Ganancia relativa de la conversión del Grupo B (filtrado): </span><span class="sc">{</span>relative_gain_filtered<span class="sc">:.3f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Valor p (conversión, datos filtrados): 0.01246
+Ganancia relativa de la conversión del Grupo B (filtrado): 0.182</code></pre>
+</div>
+</div>
+<p>Análisis de la significancia estadística de la conversión (datos filtrados) -Valor p: El valor p es 0.01246 . -Ganancia relativa: La ganancia relativa de la conversión del Grupo B es 0,182 . Conclusiones: El valor p de 0.01246 es menor que el umbral de 0.05, lo que significa que la diferencia en la conversión entre los grupos sigue siendo estadísticamente significativa incluso después de eliminar a los usuarios anómalos. La ganancia relativa del 18,2% del Grupo B con respecto al Grupo A también se mantiene, e incluso aumenta ligeramente en comparación con el resultado de los datos en bruto (16%). Esto demuestra que la superioridad del Grupo B no es un efecto de los datos atípicos, sino que es una diferencia real y confiable.</p>
+<div id="cell-21" class="cell" data-execution_count="13">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy.stats <span class="im">as</span> stats</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Filtra los datos de ingresos de cada grupo, excluyendo a los usuarios anómalos</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>revenueA_filtered <span class="op">=</span> orders_filtered[np.logical_and(</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>    orders_filtered[<span class="st">'group'</span>] <span class="op">==</span> <span class="st">'A'</span>,</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>    np.logical_not(orders_filtered[<span class="st">'visitorId'</span>].isin(abnormalUsers))</span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>)][<span class="st">'revenue'</span>]</span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>revenueB_filtered <span class="op">=</span> orders_filtered[np.logical_and(</span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>    orders_filtered[<span class="st">'group'</span>] <span class="op">==</span> <span class="st">'B'</span>,</span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>    np.logical_not(orders_filtered[<span class="st">'visitorId'</span>].isin(abnormalUsers))</span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>)][<span class="st">'revenue'</span>]</span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Calcula la significancia estadística y la ganancia relativa</span></span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a>p_value_revenue_filtered <span class="op">=</span> stats.mannwhitneyu(revenueA_filtered, revenueB_filtered)[<span class="dv">1</span>]</span>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a>relative_gain_revenue_filtered <span class="op">=</span> revenueB_filtered.mean() <span class="op">/</span> revenueA_filtered.mean() <span class="op">-</span> <span class="dv">1</span></span>
+<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Valor p (tamaño de pedido, datos filtrados): </span><span class="sc">{</span>p_value_revenue_filtered<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
+<span id="cb21-19"><a href="#cb21-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Ganancia relativa del tamaño de pedido del Grupo B (filtrado): </span><span class="sc">{</span>relative_gain_revenue_filtered<span class="sc">:.3f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Valor p (tamaño de pedido, datos filtrados): 0.680
+Ganancia relativa del tamaño de pedido del Grupo B (filtrado): -0.047</code></pre>
+</div>
+</div>
+<p>Análisis de la significancia estadística del tamaño del pedido (datos filtrados) -Valor p: El valor p de 0.680 es mucho mayor que 0.05. Esto significa que la diferencia en el tamaño de pedido promedio entre los grupos no es estadísticamente significativa . -Ganancia relativa: Después de eliminar las anomalías, la ganancia relativa del Grupo B se vuelve negativa (-4,7%) . Esto indica que, sin los pedidos inusualmente caros, el tamaño de pedido promedio del Grupo A es ligeramente superior.</p>
+<p>El eliminarlas, la diferencia en el tamaño de pedido promedio se vuelve estadísticamente insignificante y, de hecho, el Grupo B ya no muestra una ventaja. Sin embargo, la conversión del Grupo B sigue siendo significativamente superior a la del Grupo A.</p>
+<p>Resumen de los hallazgos</p>
+<pre><code>-Gráficos acumulados : El Grupo B demostró un rendimiento superior en ingresos y conversión, aunque los picos en los gráficos de ingresos y tamaño de pedido sugerían la presencia de anomalías. El gráfico de diferencia relativa de la conversión mostró que el Grupo B se mantuvo consistentemente por encima del Grupo A.
+
+-Análisis de anomalías : Identificaste a los usuarios que hicieron 3 o más pedidos ya los pedidos con un precio superior a 414.28 USD como anomalías. En total, 58 usuarios fueron clasificados como anómalos.</code></pre>
+<p>Significancia estadística (datos brutos)</p>
+<pre><code>-Conversión : La diferencia entre los grupos fue estadísticamente significativa (pag-valor = 0,011).
+
+-Tamaño del pedido : La diferencia no fue estadísticamente significativa (pag-valor = 0,862).</code></pre>
+<p>Significancia estadística (datos filtrados) :</p>
+<pre><code>-Conversión : La diferencia siguió siendo estadísticamente significativa (pag-valor = 0,012), e incluso la ganancia relativa del Grupo B aumentó un 18,2%.
+
+-Tamaño del pedido : La diferencia se mantuvo no significativa (pag-valor = 0.680), y la ganancia relativa del Grupo B se volvió negativa (-4.7%), confirmando que las anomalías habían inflado la métrica.
+
+Decisión basada en los resultados de la prueba.</code></pre>
+<p>Basado en todos los análisis, la decisión final es: Parar la prueba, considere que el Grupo B es el grupo líder y concluya que la prueba es un éxito.</p>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

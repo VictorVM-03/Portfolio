@@ -1,0 +1,57 @@
+---
+title: "Evitando la fuga de clientes: El caso Model Fitness"
+subtitle: "Predicción de Churn y Segmentación con Machine Learning"
+format:
+  html:
+    page-layout: article
+---
+
+## 🚩 El Problema: El silencio de los clientes
+En el mundo de los gimnasios, el **churn** (fuga de clientes) es el enemigo silencioso. Un día un socio deja de asistir y, para cuando el sistema lo detecta, la relación ya se ha perdido. **Model Fitness** necesitaba dejar de reaccionar y empezar a predecir.
+
+---
+
+### 🔍 El Objetivo: De la reacción a la predicción
+Mi enfoque consistió en construir una herramienta de alerta temprana. El objetivo no era solo saber quién se fue, sino identificar a los usuarios con alta probabilidad de abandono para intervenir con estrategias de retención personalizadas.
+
+### 💡 El Hallazgo Clave
+Tras el análisis, descubrimos que la **asistencia a clases grupales** y la **antigüedad del contrato** son los predictores más fuertes de lealtad. Usuarios que no asisten a clases grupales en sus primeros dos meses tienen una probabilidad de fuga drásticamente mayor.
+
+---
+
+## 🛠️ Documentación Técnica del Proyecto
+
+### Modelado Predictivo
+Evaluamos diversos algoritmos de clasificación binaria para encontrar el equilibrio perfecto entre precisión y sensibilidad:
+
+* **Algoritmo Seleccionado:** **Random Forest** (Bosque Aleatorio).
+* **Métrica de Éxito:** Logramos un **Recall del 83.49%**, lo que nos permite capturar a la gran mayoría de los clientes en riesgo real antes de que cancelen.
+* **Stack Técnico:** Python (Scikit-learn, Pandas, Seaborn).
+
+---
+
+### 👥 Segmentación de Riesgo (Clustering K-Means)
+No todos los clientes se van por la misma razón. Identificamos 5 perfiles mediante Clustering, destacando estos tres grupos para la toma de decisiones:
+
+| Clúster | Perfil de Riesgo | Tasa de Churn | Características Principales |
+|---------|------------------|---------------|----------------------------|
+| **Clúster 3** | 🚨 **Extremo** | >57% | Clientes nuevos, contratos cortos, baja asistencia. |
+| **Clúster 4** | 📞 **Inalcanzable**| ~27% | Sin teléfono registrado; imposible contactar directamente. |
+| **Clúster 2** | ⭐ **Lealtad** | <2.2% | Contratos largos, alta edad promedio, gasto en servicios extra. |
+
+---
+
+### 🚀 Recomendaciones Estratégicas
+
+1. **Incentivo a la Recurrencia:** Activar alertas automáticas si un cliente del **Clúster 3** falta más de una semana en su primer mes.
+2. **Engagement Grupal:** Ofrecer invitaciones gratuitas a clases grupales para usuarios nuevos, fomentando el hábito social.
+3. **Recuperación de Datos:** Ofrecer un beneficio inmediato (ej. cupón de café) al **Clúster 4** a cambio de actualizar sus datos de contacto.
+
+---
+
+---
+
+::: {style="text-align: center; margin-top: 30px;"}
+[<i class="fa-brands fa-linkedin"></i> Conectar en LinkedIn](https://www.linkedin.com/in/victorvazquez-dataanalyst){.btn .btn-outline-primary .btn-lg} 
+[<i class="fa-brands fa-github"></i> Ver Código en GitHub](https://github.com/VictorVM-03/Model-Fitness-Churn-Prediction){.btn .btn-outline-dark .btn-lg}
+:::
