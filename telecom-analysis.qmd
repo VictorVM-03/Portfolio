@@ -1,0 +1,59 @@
+---
+title: "Business Intelligence: Eficiencia Operativa en Call Center"
+subtitle: "Detección Estadística de Ineficacia mediante Python y Tableau"
+format:
+  html:
+    page-layout: article
+---
+
+## 📡 El Contexto: Optimización del Capital Humano
+En el sector de telecomunicaciones, la eficiencia de los operadores de Call Center impacta directamente en los costos y en la satisfacción del cliente. El objetivo de este proyecto fue desarrollar una metodología robusta para identificar operadores con bajo rendimiento y transformarlos mediante un plan de coaching basado en datos.
+
+---
+
+### 📊 Análisis de Datos y KPIs
+A diferencia de un análisis tradicional, este proyecto utiliza un enfoque de **People Analytics**. Se procesaron miles de registros para establecer indicadores clave:
+
+* **Ineficiencia en Gestión:** Tiempo de Espera Promedio (`avg_waiting_time`).
+* **Baja Disponibilidad:** Tasa de Llamadas Perdidas.
+* **Proactividad:** Volumen de llamadas salientes.
+
+---
+
+### 🛠️ Detalle Técnico y Validación
+Este análisis no solo identifica el bajo rendimiento, sino que lo valida estadísticamente para asegurar que las decisiones gerenciales sean justas y precisas.
+
+**Metodología:**
+1.  **Establecimiento de Umbrales:** Se utilizó el **Percentil 95 (P95)** como línea roja estadística.
+2.  **Validación de Hipótesis:** Se aplicó una **Prueba t de Student** ($p < 0.05$) para confirmar que la diferencia entre los operadores "Eficaces" e "Ineficaces" es real y no azarosa.
+3.  **Herramientas:** Limpieza y estadística en **Python (Pandas, SciPy)** y visualización en **Tableau**.
+
+---
+
+### 📊 Visualización de Resultados
+El resultado final es un dashboard diseñado para la gerencia de supervisión.
+
+**[👉 Click aquí para ver el Dashboard Interactivo en Tableau Public](https://public.tableau.com/views/CallMeMaybe-Analisisdeineficacia/CallMeMaybe-AnlisisdeIneficaciaOperadores?:language=es-ES&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)**
+
+---
+
+### 🔍 Hallazgos Clave
+* **Identificación Sólida:** Se detectaron **109 operadores** que superan los umbrales críticos de ineficiencia.
+* **Segmento de Doble Riesgo:** Se identificaron **33 operadores** con alta ineficiencia y nula proactividad, sugiriendo una necesidad inmediata de revisión de roles.
+* **Significancia:** La metodología fue validada con un nivel de confianza del 95% ($p < 0.05$).
+
+---
+
+### 🎯 Recomendaciones Estratégicas
+* **Coaching Focalizado:** Capacitación en CRM para operadores con tiempos de espera altos.
+* **Auditoría Técnica:** Investigar causas raíz en operadores con altas tasas de llamadas perdidas.
+* **Monitoreo Proactivo:** Implementación del Dashboard para revisiones semanales de KPI.
+
+---
+
+---
+
+::: {style="text-align: center; margin-top: 30px;"}
+[<i class="fa-brands fa-linkedin"></i> Conectar en LinkedIn](https://www.linkedin.com/in/victorvazquez-dataanalyst){.btn .btn-outline-primary .btn-lg} 
+[<i class="fa-brands fa-github"></i> Ver Código en GitHub](https://github.com/VictorVM-03/Telecom-Operator-Performance-BI){.btn .btn-outline-dark .btn-lg}
+:::

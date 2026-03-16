@@ -1,0 +1,142 @@
+/* ==========================================================
+   ESTILOS PORTAFOLIO 2026 - VÍCTOR VÁZQUEZ
+   Enfoque: Minimalismo Funcional & Experiencia Fluida
+   ========================================================== */
+
+/* 1. CONFIGURACIÓN GLOBAL Y TIPOGRAFÍA */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: #2d3436;
+    line-height: 1.7;
+    background-color: #f8fafc; /* Fondo neutro premium */
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 700;
+    color: #1e293b;
+    margin-top: 2rem;
+    letter-spacing: -0.02em;
+}
+
+/* 2. NAVEGACIÓN (Glassmorphism) */
+.navbar {
+    backdrop-filter: blur(12px);
+    background-color: rgba(255, 255, 255, 0.85) !important;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+    transition: all 0.3s ease;
+}
+
+.navbar-brand, .nav-link {
+    font-weight: 600;
+    color: #0f172a !important;
+}
+
+/* 3. IMÁGENES Y CONTENEDORES (Bento Style) */
+img {
+    border-radius: 20px; /* Bordes redondeados modernos */
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-bottom: 2rem;
+}
+
+img:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
+}
+
+/* 4. CALLOUTS (Insights con barra lateral de color) */
+.callout.callout-style-simple {
+    border-left-width: 5px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border-left-color: #3b82f6 !important; /* Azul de acento */
+    margin: 2rem 0;
+}
+
+.callout-important.callout-style-simple {
+    border-left-color: #ef4444 !important; /* Rojo para alertas de fraude */
+    background-color: #fef2f2;
+}
+
+/* 5. BOTONES (Píldora e Interacción Dinámica) */
+.btn {
+    border-radius: 9999px; /* Forma de píldora */
+    padding: 12px 28px;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3);
+}
+
+.btn-primary {
+    background-color: #3b82f6;
+    border-color: #3b82f6;
+}
+
+.btn-outline-primary {
+    border-width: 2px;
+    color: #3b82f6;
+    border-color: #3b82f6;
+}
+
+.btn-outline-primary:hover {
+    background-color: #3b82f6;
+    color: white;
+}
+
+/* 6. TABLAS TÉCNICAS (Look Limpio) */
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    margin: 2rem 0;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+th {
+    background-color: #f1f5f9;
+    padding: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+}
+
+td {
+    padding: 15px;
+    border-top: 1px solid #e2e8f0;
+}
+
+/* 7. MICRO-ELEMENTOS (Badges de Tecnología) */
+code {
+    background-color: #e2e8f0;
+    color: #1e293b;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.85em;
+    font-weight: 500;
+}
+
+/* 8. ANIMACIONES DE ENTRADA */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+main {
+    animation: fadeIn 0.8s ease-out;
+}

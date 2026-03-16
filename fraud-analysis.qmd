@@ -1,0 +1,53 @@
+---
+title: "FinShield: Inteligencia en Prevención de Fraude"
+subtitle: "Detección de Anomalías Financieras en Datos de PaySim"
+format:
+  html:
+    page-layout: article
+---
+
+## 🛡️ El Contexto: La aguja en el pajar financiero
+En el ecosistema móvil, el fraude no es solo un costo operativo, es una amenaza a la confianza del usuario. Utilizando el simulador **PaySim**, mapeé un mes completo de operaciones (744 horas) para identificar comportamientos maliciosos donde agentes fraudulentos intentan vaciar cuentas mediante patrones específicos.
+
+---
+
+### <i class="fa-solid fa-magnifying-glass-chart"></i> Hallazgo Clave: Escala Logarítmica
+
+Para visualizar la diferencia real entre una transacción normal y un fraude, implementé un análisis de escala logarítmica. 
+
+::: {.callout-important appearance="simple"}
+## Insight de Riesgo
+Los montos de fraude muestran una consistencia quirúrgica en canales específicos. Mientras las transacciones legales varían aleatoriamente, el fraude tiende a "limpiar" cuentas con montos máximos permitidos.
+:::
+
+![Comparativa de Montos: Distribución en Escala Logarítmica](ecosistema-fraude.jpg){fig-align="center" width="90%"}
+
+---
+
+### 🛠️ Principales Descubrimientos de Riesgo
+
+* **<i class="fa-solid fa-crosshairs"></i> Concentración Quirúrgica:** El fraude no es aleatorio; ocurre exclusivamente en dos tipos de movimientos: `TRANSFER` y `CASH_OUT`.
+* **<i class="fa-solid fa-scale-unbalanced"></i> Desbalance Crítico:** Solo el **0.9%** de las transacciones son fraudulentas. Esto requiere un enfoque analítico especializado para evitar "falsos negativos".
+* **<i class="fa-solid fa-chart-line"></i> Patrón de Montos:** Las transacciones fraudulentas tienden a ser montos máximos consistentes con los límites de transferencia, buscando vaciar la cuenta en un solo movimiento.
+
+---
+
+### ⚙️ Stack Tecnológico
+* **Python:** Núcleo del procesamiento lógico.
+* **Pandas / Numpy:** Limpieza y transformación de millones de registros.
+* **Seaborn / Matplotlib:** Visualización estratégica de anomalías y boxplots.
+
+---
+
+### 🚀 Impacto Estratégico
+El análisis permite a las instituciones financieras:
+1.  **Reducir Falsos Positivos:** Enfocando las alertas solo en los tipos de movimiento detectados.
+2.  **Alertas por Monto:** Implementar banderas de riesgo basadas en los umbrales de escala logarítmica identificados.
+3.  **Optimización de Recursos:** Priorizar la revisión manual en transacciones de tipo `TRANSFER` que superen el promedio histórico.
+
+---
+
+::: {style="text-align: center; margin-top: 30px;"}
+[<i class="fa-brands fa-linkedin"></i> Conectar en LinkedIn](https://www.linkedin.com/in/victorvazquez-dataanalyst){.btn .btn-outline-primary .btn-lg} 
+[<i class="fa-brands fa-github"></i> Ver Código en GitHub](https://github.com/VictorVM-03/FinShield-PaySim-Analysis){.btn .btn-outline-dark .btn-lg}
+:::
