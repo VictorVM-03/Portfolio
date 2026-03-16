@@ -21,7 +21,6 @@ Los montos de fraude muestran una consistencia quirúrgica en canales específic
 :::
 
 ![Comparativa de Montos: Distribución en Escala Logarítmica](ecosistema-fraude.jpg){fig-align="center" width="90%"}
-
 ---
 
 ### 🛠️ Principales Descubrimientos de Riesgo
